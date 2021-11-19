@@ -1,13 +1,18 @@
-version: "3"
+version: "3.3"
 services:
   hapi-fhir-jpaserver-start:
     build: .
     container_name: hapi-fhir-jpaserver-start
     restart: on-failure
+    configs:
+      - source: hapi
+        target: /data/hapi/lucenefiles/application.yaml
     ports:
       - "8080:8080"
     volumes:
-      - "./src:/tmp/hapi-fhir-jpaserver-startter/src/"
+      - "./src:/tmp/hapi-fhir-jpaserver-starter/src/"
+    environment:
+      SPRING_CONFIG_LOCATION: '/data/hapi/lucenefiles/application.yaml'
   db:
     image: postgres
     environment:
@@ -27,3 +32,6 @@ services:
 volumes:
   data:
   synthea:
+configs:
+  hapi:
+    file: ./application.yaml

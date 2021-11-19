@@ -24,7 +24,8 @@ CMD ["/app/main.war"]
 
 FROM tomcat:9.0.38-jdk11-openjdk-slim-buster
 
-RUN mkdir -p /data/hapi/lucenefiles && chmod 775 /data/hapi/lucenefiles
+COPY application.yaml /data/hapi/lucenefiles/
+RUN mkdir -p /data/hapi/lucenefiles && chmod 775 /data/hapi/lucenefiles && chmod 775 /data/hapi/lucenefiles/application.yaml
 COPY --from=build-hapi /tmp/hapi-fhir-jpaserver-starter/target/*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
