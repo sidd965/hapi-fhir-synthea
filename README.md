@@ -1,9 +1,6 @@
 # HAPI-FHIR Starter Project
 
-This project is a complete starter project you can use to deploy a FHIR server using HAPI FHIR JPA.
-
-Note that this project is specifically intended for end users of the HAPI FHIR JPA server module (in other words, it helps you implement HAPI FHIR, it is not the source of the library itself). If you are looking for the main HAPI FHIR project, see here: https://github.com/jamesagnew/hapi-fhir
-
+This project is a complete starter project you can use to deploy a FHIR server using HAPI FHIR JPA with the Postgresql database and you can easily generate the patients using synthea.
 Need Help? Please see: https://github.com/jamesagnew/hapi-fhir/wiki/Getting-Help
 
 ## Prerequisites
