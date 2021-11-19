@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: 'jdbc:postgresql://db:5432/fhirdb'
+    url: 'jdbc:postgresql://fhir-server-db:5432/fhirdb'
     #url: jdbc:h2:mem:test_mem
     username: db
     password: db
