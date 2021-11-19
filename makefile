@@ -13,7 +13,7 @@ build:
 start:
 	docker-compose up -d
  
-down:
+stop:
 	docker-compose down
 synthea:
 	curl -Ns "http://localhost:8000/?stu=3&p=10"

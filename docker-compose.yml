@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  hapi-fhir-jpaserver-start:
+  fhir-server:
     build: .
     container_name: hapi-fhir-jpaserver-start
     restart: on-failure
@@ -13,7 +13,7 @@ services:
       - "./src:/tmp/hapi-fhir-jpaserver-starter/src/"
     environment:
       SPRING_CONFIG_LOCATION: '/data/hapi/lucenefiles/application.yaml'
-  db:
+  fhir-server-db:
     image: postgres
     environment:
       POSTGRES_PASSWORD: db
@@ -23,7 +23,7 @@ services:
       - "5432:5432"
     volumes: 
       - "data:/var/lib/postgresql/data"
-  synthea:
+  fhir-patient-generator:
     image: siddkhewal/synthea:0.1
     ports:
       - "8000:80"
