@@ -24,7 +24,7 @@ services:
     volumes: 
       - "data:/var/lib/postgresql/data"
   synthea:
-    image: smartonfhir/synthea
+    image: siddkhewal/synthea:0.1
     ports:
       - "8000:80"
     volumes:

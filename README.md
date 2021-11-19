@@ -12,6 +12,8 @@ In order to use this sample, you should have:
 
 - Install docker and docker-compose
 
+SELECT * FROM information_schema.tables 
+WHERE table_schema = 'public'
 
 ## Configuration via overridden application.yaml file and using Docker
 
