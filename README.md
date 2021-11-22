@@ -26,6 +26,6 @@ Run the below command
 Run the below command
   - make stop
 
-## Un-Install HAPI FHIR server and POSTGRES SQL
+## Add patients using synthea application
 Generate the patients
   - make synthea
