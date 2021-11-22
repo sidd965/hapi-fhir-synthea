@@ -13,6 +13,7 @@ Below are the prerequisites to run this project:
       - cd hapi-fhir-synthea
       - ./letstart.sh
       - make tools
+   3- Passwords are managed in .env file and it can be managed through vault in production environment
 
 ## Install HAPI FHIR server and POSTGRES SQL
 
